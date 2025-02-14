@@ -10,6 +10,7 @@ import io as _io
 import contextlib
 
 import numpy as np
+np.float = np.float64
 
 from .audio import load_audio_file
 from .midi import load_midi, write_midi
@@ -19,7 +20,7 @@ ENCODING = 'utf8'
 
 # dtype for numpy structured arrays that contain labelled segments
 # 'label' needs to be castable to str
-SEGMENT_DTYPE = [('start', np.cfloat), ('end', np.cfloat), ('label', object)]
+SEGMENT_DTYPE = [('start', np.float), ('end', np.float), ('label', object)]
 
 
 # overwrite the built-in open() to transparently apply some magic file handling
