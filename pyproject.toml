@@ -6,3 +6,10 @@ requires = [
     "numpy>2",
 ]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "madmom"
+version = "0.17.dev0"
+license = {file = "LICENSE"}
+description = 'Python audio signal processing library'
+readme = "README.rst"
